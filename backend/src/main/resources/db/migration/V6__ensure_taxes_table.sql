@@ -1,0 +1,14 @@
+
+CREATE TABLE IF NOT EXISTS public.taxes (
+    id BIGSERIAL PRIMARY KEY,
+
+    name VARCHAR(100) NOT NULL UNIQUE,
+
+    rate NUMERIC(5,2) NOT NULL
+        CHECK (rate >= 0 AND rate <= 100),
+
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+
+    created_at TIMESTAMP NOT NULL
+        DEFAULT CURRENT_TIMESTAMP
+);

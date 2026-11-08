@@ -1,0 +1,43 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+application-local.properties
+application-prod.properties
+**/application-local.properties
+**/application-prod.properties
+
+# Java / Spring Boot
+**/target/
+*.class
+*.log
+
+# Frontend
+**/node_modules/
+**/dist/
+**/.vite/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Local files
+*.zip
+# Backend diagnostic files
+backend/*log*.txt
+backend/*error*.txt
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# Local Spring Boot configuration
+**/application-local.yml
+**/application-local.yaml
+
+# Database backup files
+backend/*backup.sql
